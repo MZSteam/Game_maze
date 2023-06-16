@@ -1,0 +1,6 @@
+*/libburst-11vm-14.dylib filter=lfs diff=lfs merge=lfs -text
+*/payload.tar.7z filter=lfs diff=lfs merge=lfs -text
+E:/github/game_maze/GameMaze/library/PackageCache/com.unity.burst@1.8.4/.Runtime/libburst-11vm-14.dylib filter=lfs diff=lfs merge=lfs -text
+E:/github/game_maze/GameMaze/library/PackageCache/com.unity.toolChain.win-x86_64-linux-x86_64@2.0.5/data~/payload.tar.7z filter=lfs diff=lfs merge=lfs -text
+GameMaze/library/PackageCache/com.unity.toolChain.win-x86_64-linux-x86_64@2.0.5/data~/payload.tar.7z filter=lfs diff=lfs merge=lfs -text
+GameMaze/library/PackageCache/com.unity.burst@1.8.4/.Runtime/libburst-11vm-14.dylib filter=lfs diff=lfs merge=lfs -text

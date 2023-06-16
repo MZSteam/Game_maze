@@ -70,3 +70,5 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+GameMaze/Library/PackageCache/com.unity.burst@1.8.4/.Runtime/libburst-llvm-14.dylib
+GameMaze/Library/PackageCache/com.unity.toolChain.win-x86_64-linux-x86_64@2.0.5/data~/payload.tar.7z

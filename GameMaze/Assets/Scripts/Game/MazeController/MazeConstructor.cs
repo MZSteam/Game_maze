@@ -1,13 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class MazeConstructor : MonoBehaviour
 {
     public bool showDebug;
 
-    [SerializeField] private Material mazeMat1;
     private MazeDataGenerator dataGenerator;
+    [SerializeField] private Camera camera;
+    private bool CameraPos = false;
+    private int sizeR = 0;
+    private int sizeC = 0;
+    public Tilemap tilemap;
+    public TileBase floorTile;
+    public TileBase wallTile;
+    public TileBase wallSideTile;
+    public TileBase wallCornerTile;
 
     public int[,] data
     {
@@ -31,6 +40,8 @@ public class MazeConstructor : MonoBehaviour
             Debug.LogError("Odd numbers work better for dungeon size.");
         }
 
+        sizeR = sizeRows;
+        sizeC = sizeCols;
         data = dataGenerator.FromDimensions(sizeRows, sizeCols);
     }
     private void OnGUI()
@@ -62,5 +73,55 @@ public class MazeConstructor : MonoBehaviour
             msg += "\n";
         }
         GUI.Label(new Rect(20,20,500,500), msg);
+    }
+    private void Start()
+    {
+
+        int[,] maze = data;
+        int rMax = maze.GetUpperBound(0);
+        int cMax = maze.GetUpperBound(1);
+
+        for (int i = 0; i < maze.GetLength(0); i++)
+        {
+            for (int j = 0; j < maze.GetLength(1); j++)
+            {
+                if (maze[i, j] == 0)
+                {
+                    tilemap.SetTile(new Vector3Int(i, j, 0), floorTile);
+                    if (!CameraPos)
+                    {
+                        if (sizeR / 2 < i && sizeC / 2 < j)
+                        {
+                            if (j - 2 < sizeC / 2) 
+                            {
+                                camera.transform.position = new Vector3Int(i, j, -10);
+                                CameraPos = !CameraPos;
+                            }
+                        }
+                    }
+                }
+                else if (maze[i, j] == 1)
+                {
+                    try
+                    {
+                        if (maze[i + 1, j] == 1 && maze[i - 1, j] == 1)
+                        {
+                            tilemap.SetTile(new Vector3Int(i, j, 0), wallTile);
+                        }
+                        else if (maze[i, j - 1] == 1 && maze[i, j + 1] == 1)
+                        {
+                            tilemap.SetTile(new Vector3Int(i, j, 0), wallSideTile);
+                        }
+                        else
+                        {
+                            tilemap.SetTile(new Vector3Int(i, j, 0), wallCornerTile);
+                        }
+                    }catch (System.IndexOutOfRangeException e) 
+                    { 
+                    
+                    }        
+                }
+            }
+        }
     }
 }

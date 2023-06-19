@@ -11,6 +11,6 @@ public class GameController : MonoBehaviour
     void Start()
     {
         generator = GetComponent<MazeConstructor>();
-        generator.GenerateNewMaze(31,31);
+        generator.GenerateNewMaze(160,160);
     }
 }

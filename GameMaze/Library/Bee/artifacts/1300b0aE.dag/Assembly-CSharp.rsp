@@ -407,6 +407,7 @@
 "Assets/Scripts/Game/MazeController/GameController.cs"
 "Assets/Scripts/Game/MazeController/MazeConstructor.cs"
 "Assets/Scripts/Game/MazeController/MazeDataGenerator.cs"
+"Assets/Scripts/Game/Player/PlayerController.cs"
 "Assets/Scripts/UI/UI Menu/SwitchingMenu.cs"
 "Assets/Scripts/UI/UI Scaling/Backgraund_Scaling.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"

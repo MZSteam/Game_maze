@@ -33,54 +33,61 @@ public class MazeDataGenerator
     }
     private void GenerateMazeRecursive(int[,] maze, int r, int c)
     {
-        List<int> directions = new List<int> { 1, 2, 3, 4 };
-        directions = ShuffleList(directions);
-
-        foreach (int direction in directions)
+        try
         {
-            switch (direction)
+            List<int> directions = new List<int> { 1, 2, 3, 4 };
+            directions = ShuffleList(directions);
+
+            foreach (int direction in directions)
             {
-                case 1: // Up
-                    if (r - 2 <= 0)
-                        continue;
-                    if (maze[r - 2, c] != 0)
-                    {
-                        maze[r - 2, c] = 0;
-                        maze[r - 1, c] = 0;
-                        GenerateMazeRecursive(maze, r - 2, c);
-                    }
-                    break;
-                case 2: // Right
-                    if (c + 2 >= maze.GetLength(1) - 1)
-                        continue;
-                    if (maze[r, c + 2] != 0)
-                    {
-                        maze[r, c + 2] = 0;
-                        maze[r, c + 1] = 0;
-                        GenerateMazeRecursive(maze, r, c + 2);
-                    }
-                    break;
-                case 3: // Down
-                    if (r + 2 >= maze.GetLength(0) - 1)
-                        continue;
-                    if (maze[r + 2, c] != 0)
-                    {
-                        maze[r + 2, c] = 0;
-                        maze[r + 1, c] = 0;
-                        GenerateMazeRecursive(maze, r + 2, c);
-                    }
-                    break;
-                case 4: // Left
-                    if (c - 2 <= 0)
-                        continue;
-                    if (maze[r, c - 2] != 0)
-                    {
-                        maze[r, c - 2] = 0;
-                        maze[r, c - 1] = 0;
-                        GenerateMazeRecursive(maze, r, c - 2);
-                    }
-                    break;
+                switch (direction)
+                {
+                    case 1: // Up
+                        if (r - 2 <= 0)
+                            continue;
+                        if (maze[r - 2, c] != 0)
+                        {
+                            maze[r - 2, c] = 0;
+                            maze[r - 1, c] = 0;
+                            GenerateMazeRecursive(maze, r - 2, c);
+                        }
+                        break;
+                    case 2: // Right
+                        if (c + 2 >= maze.GetLength(1) - 1)
+                            continue;
+                        if (maze[r, c + 2] != 0)
+                        {
+                            maze[r, c + 2] = 0;
+                            maze[r, c + 1] = 0;
+                            GenerateMazeRecursive(maze, r, c + 2);
+                        }
+                        break;
+                    case 3: // Down
+                        if (r + 2 >= maze.GetLength(0) - 1)
+                            continue;
+                        if (maze[r + 2, c] != 0)
+                        {
+                            maze[r + 2, c] = 0;
+                            maze[r + 1, c] = 0;
+                            GenerateMazeRecursive(maze, r + 2, c);
+                        }
+                        break;
+                    case 4: // Left
+                        if (c - 2 <= 0)
+                            continue;
+                        if (maze[r, c - 2] != 0)
+                        {
+                            maze[r, c - 2] = 0;
+                            maze[r, c - 1] = 0;
+                            GenerateMazeRecursive(maze, r, c - 2);
+                        }
+                        break;
+                }
+                }
             }
+        catch(System.StackOverflowException e)
+        {
+
         }
     }
     private List<int> ShuffleList(List<int> list)

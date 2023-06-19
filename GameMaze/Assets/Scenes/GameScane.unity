@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c35343b7de267b4b98b026d3a8745f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showDebug: 0
+  showDebug: 1
   mazeMat1: {fileID: 0}
 --- !u!4 &241874853
 Transform:

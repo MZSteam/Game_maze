@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 44
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,6 +110,58 @@ TextureImporter:
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
+    textureFormat: 50
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -121,7 +173,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Maps_0
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 258
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c63e1086a1d36418b4197043bdefbd
+      internalID: -1759764371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maps_6
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 258
+        width: 44
+        height: 44
+      alignment: 9
+      pivot: {x: 0.8489942, y: 0.9847135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec6c76a6615eae4faa55e6769b65654
+      internalID: 1591288886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maps_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 422
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f7c612d2fdf9845b5b6303c49e4224
+      internalID: 2007677100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maps_11
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 422
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63fbdd07457db164caf0aa76673a1cbd
+      internalID: 1974092672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maps_12
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 422
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b580b6c0c67a264b905291b28489706
+      internalID: 111742256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maps_20
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 397
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5abf4a9f23c1ff34f94879e64eb7825c
+      internalID: 401030764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maps_21
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 396
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e0f8aabb0a1d04d8d58388c4f32f86
+      internalID: 911059071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maps_25
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 378
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72bbefd1b0db4bf40b7b930818d70865
+      internalID: -1570954879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maps_33
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 334
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d36329dcdb6d44da7a749346ab31d1
+      internalID: 347558937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maps_39
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 284
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdff4a18a1fc1d49b4b7049de8f158d
+      internalID: 1054619709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +394,86 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Maps_0: -1759764371
+      Maps_1: -1136311851
+      Maps_10: 2007677100
+      Maps_11: 1974092672
+      Maps_12: 111742256
+      Maps_13: -1955852777
+      Maps_14: -487034746
+      Maps_15: -1125829682
+      Maps_16: -975572946
+      Maps_17: -254288443
+      Maps_18: -1531933978
+      Maps_19: 1548362590
+      Maps_2: -151787466
+      Maps_20: 401030764
+      Maps_21: 911059071
+      Maps_22: -2019491174
+      Maps_23: -1968781098
+      Maps_24: -656193340
+      Maps_25: -1570954879
+      Maps_26: 838584087
+      Maps_27: 473113518
+      Maps_28: -1632160488
+      Maps_29: 481937339
+      Maps_3: -313995711
+      Maps_30: 209168161
+      Maps_31: -1219932605
+      Maps_32: 2029239699
+      Maps_33: 347558937
+      Maps_34: -86894830
+      Maps_35: 2097471732
+      Maps_36: -402690979
+      Maps_37: 1520701438
+      Maps_38: 771502048
+      Maps_39: 1054619709
+      Maps_4: 2052356325
+      Maps_40: 749440729
+      Maps_41: -2050505472
+      Maps_42: -2032152877
+      Maps_43: 1501798739
+      Maps_44: 1593447158
+      Maps_45: -197654865
+      Maps_46: 512126065
+      Maps_47: -423819344
+      Maps_48: 2077799147
+      Maps_49: -9921158
+      Maps_5: 1309794863
+      Maps_50: -1976167330
+      Maps_51: 1203277665
+      Maps_52: -1711127483
+      Maps_53: -1133750082
+      Maps_54: 1982904161
+      Maps_55: -1596081926
+      Maps_56: -2938941
+      Maps_57: 1133100891
+      Maps_58: -1142403305
+      Maps_59: -1045711252
+      Maps_6: 1591288886
+      Maps_60: 625014263
+      Maps_61: 408544926
+      Maps_62: 709345571
+      Maps_63: 1806215673
+      Maps_64: 573701814
+      Maps_65: 1575365021
+      Maps_66: -396757914
+      Maps_67: -286075264
+      Maps_68: 1612641454
+      Maps_69: -1452865717
+      Maps_7: 383091354
+      Maps_70: 1832644246
+      Maps_71: -1788241790
+      Maps_72: 825416169
+      Maps_73: -1334752671
+      Maps_74: 1137954594
+      Maps_75: -1422651162
+      Maps_76: -1850578718
+      Maps_77: -1024484834
+      Maps_78: -1667655598
+      Maps_8: -250272750
+      Maps_9: 338948310
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

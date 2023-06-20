@@ -10,7 +10,7 @@ public class MazeDataGenerator
     {
         placementThreshold = .1f;
     }
-    public int[,] FromDimensions(int sizeRows, int sizeCols)
+    public int[,] FromDimensions(int sizeRows, int sizeCols)//Алгоритм для создания лабиринтов
     {
         int[,] maze = new int[sizeRows, sizeCols];
 
@@ -31,7 +31,7 @@ public class MazeDataGenerator
 
         return maze;
     }
-    private void GenerateMazeRecursive(int[,] maze, int r, int c)
+    private void GenerateMazeRecursive(int[,] maze, int r, int c)//Алгоритм для создания лабиринтов
     {
         try
         {
@@ -89,6 +89,63 @@ public class MazeDataGenerator
         {
 
         }
+    }
+    public int[,] mazeOutputGenerator(int[,] maze, int sizeRows, int sizeCols)//Алгоритм формирования выходов из лаберинта по 4 стороны
+    {
+        int lefrOut;
+        int rightOut;
+        int downOut;
+        int upOut;
+        while (true)
+        {
+            lefrOut = Random.Range(5, sizeRows - 5);//Формирование левого выхода
+            Debug.Log(lefrOut);
+            if (maze[0 + 2, lefrOut] == 0) 
+            {
+                maze[0, lefrOut] = 0;
+                maze[0 + 1, lefrOut] = 0;
+
+                break;
+            }
+        }
+        while (true)
+        {
+            rightOut = Random.Range(5, sizeRows - 5);//ФОрмирование Правого выхода
+            Debug.Log(rightOut);
+            if (maze[sizeRows - 3, rightOut] == 0)
+            {
+                maze[sizeRows - 1, rightOut] = 0;
+                maze[sizeRows - 2, rightOut] = 0;
+
+                break;
+            }
+        }
+        while (true)
+        {
+            downOut = Random.Range(5, sizeRows - 5);//формирование нижнего выхода
+            Debug.Log(downOut);
+            if (maze[downOut, 0 + 2] == 0)
+            {
+                maze[downOut, 0] = 0;
+                maze[downOut, 0 + 1] = 0;
+
+                break;
+            }
+        }
+        while (true)
+        {
+            upOut = Random.Range(5, sizeRows - 5);//формирование верхнего выхода
+            Debug.Log(upOut);
+            if (maze[upOut, sizeCols - 3] == 0)
+            {
+                maze[upOut, sizeCols - 1] = 0;
+                maze[upOut, sizeCols - 2] = 0;
+
+                break;
+            }
+        }
+
+        return maze;
     }
     private List<int> ShuffleList(List<int> list)
     {

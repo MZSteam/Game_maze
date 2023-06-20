@@ -7,10 +7,11 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     private MazeConstructor generator;
+    [SerializeField] private int SizeMaze;// размер лаберинта, можно настроить через инспектор unity
 
     void Start()
     {
         generator = GetComponent<MazeConstructor>();
-        generator.GenerateNewMaze(160,160);
+        generator.GenerateNewMaze(SizeMaze, SizeMaze);// задаёт размер лаберинту
     }
 }

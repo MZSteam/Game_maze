@@ -172,10 +172,14 @@ MonoBehaviour:
   tilemap: {fileID: 2024803488}
   tilemapWall: {fileID: 1420511241}
   floorTile: {fileID: 11400000, guid: d556a6020a3199343b780856682b1794, type: 2}
-  wallTile: {fileID: 11400000, guid: 57b6e98556db6e54ea821e4f01e502b6, type: 2}
-  wallSideTile: {fileID: 11400000, guid: 0f55aba3be32e094faeabdcfa8aaa78e, type: 2}
-  wallCornerTile: {fileID: 11400000, guid: 2c223373e6434b548a8adbbb04ffe886, type: 2}
-  wallDownTile: {fileID: 11400000, guid: b0ef02ca59aa79f4cbf59555579177bd, type: 2}
+  wallTile: {fileID: 11400000, guid: 06516be174bcbf341bc1eb1d68d6e9ca, type: 2}
+  wallSideTile: {fileID: 11400000, guid: 87d2a7bf6ea96a447a4f6b6f94fd42dd, type: 2}
+  wallCornerTile: {fileID: 11400000, guid: f25045935acbb2b47a002c4da779fd22, type: 2}
+  wallDownTile: {fileID: 11400000, guid: 69c53a4783302374cb902768f53f72a9, type: 2}
+  wallLeftDownTile: {fileID: 11400000, guid: c462c504f5ef0ea45addc931ffc94b94, type: 2}
+  wallRightDownTile: {fileID: 11400000, guid: e0f5657272cf17241ada599357d727eb, type: 2}
+  wallLeftUpTile: {fileID: 11400000, guid: 5b2b7f218310aec46bf3676f031f9e27, type: 2}
+  wallRightUpTile: {fileID: 11400000, guid: 10c91f5c3c0f37c4b8dfc92a7f9a086a, type: 2}
 --- !u!4 &241874853
 Transform:
   m_ObjectHideFlags: 0
@@ -280,6 +284,7 @@ GameObject:
   - component: {fileID: 1021735995}
   - component: {fileID: 1021735994}
   - component: {fileID: 1021735997}
+  - component: {fileID: 1021735998}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -376,6 +381,50 @@ MonoBehaviour:
   target: {fileID: 1206771175}
   smoothSpeed: 0.125
   offset: {x: 0, y: 0, z: 0}
+--- !u!114 &1021735998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021735993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &1206771172
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,10 @@ public class MazeConstructor : MonoBehaviour
     public TileBase wallSideTile;
     public TileBase wallCornerTile;
     public TileBase wallDownTile;
+    public TileBase wallLeftDownTile;
+    public TileBase wallRightDownTile;
+    public TileBase wallLeftUpTile;
+    public TileBase wallRightUpTile;
 
     public int[,] data
     {
@@ -119,6 +123,22 @@ public class MazeConstructor : MonoBehaviour
                         else if(maze[i + 1, j] == 0 && maze[i - 1, j] == 0 && maze[i, j - 1] == 0 && maze[i, j + 1] == 1)
                         {
                             tilemapWall.SetTile(new Vector3Int(i, j, 0), wallDownTile);//Создание стенки окончания есть стенка заканчивается только есть есть блок сверху
+                        }
+                        else if (maze[i - 1, j] == 1 && maze[i + 1, j] == 0 && maze[i, j + 1] == 0 && maze[i, j - 1] == 1)
+                        {
+                            tilemapWall.SetTile(new Vector3Int(i, j, 0), wallLeftDownTile);//Созаднаие боковой стены слева в низ
+                        }
+                        else if (maze[i - 1, j] == 0 && maze[i + 1, j] == 1 && maze[i, j + 1] == 0 && maze[i, j - 1] == 1)
+                        {
+                            tilemapWall.SetTile(new Vector3Int(i, j, 0), wallRightDownTile);//Созаднаие боковой стены справа в низ
+                        }
+                        else if (maze[i - 1, j] == 1 && maze[i + 1, j] == 0 && maze[i, j + 1] == 1 && maze[i, j - 1] == 0)
+                        {
+                            tilemapWall.SetTile(new Vector3Int(i, j, 0), wallLeftUpTile); //Созаднаие боковой стены слева в верх
+                        }
+                        else if (maze[i - 1, j] == 0 && maze[i + 1, j] == 1 && maze[i, j + 1] == 1 && maze[i, j - 1] == 0)
+                        {
+                            tilemapWall.SetTile(new Vector3Int(i, j, 0), wallRightUpTile); //Созаднаие боковой стены справа в верх
                         }
                         else if (maze[i + 1, j] == 1 && maze[i - 1, j] == 1)
                         {

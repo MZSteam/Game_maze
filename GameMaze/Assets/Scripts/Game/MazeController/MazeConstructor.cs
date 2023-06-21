@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -10,7 +11,9 @@ public class MazeConstructor : MonoBehaviour
     private MazeDataGenerator dataGenerator;
     [SerializeField] private Camera camera;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject enemies;
     private bool CameraPos = false;
+    private bool Enim = true;
     private int sizeR = 0;
     private int sizeC = 0;
     public Tilemap tilemap;
@@ -102,12 +105,7 @@ public class MazeConstructor : MonoBehaviour
                         {
                             if (j - 2 < sizeC / 2) //перемещение камеры и игрока на начальную игровую позицию
                             {
-                                Vector3 pos = new Vector3(i, j, 0f);
-                                Vector3Int cellPosition = tilemap.WorldToCell(pos);
-                                Vector3 cellCenterPosition = tilemap.GetCellCenterWorld(cellPosition);
-                                player.transform.position = cellCenterPosition;//грой становиться на позицию по середине тайла на tilemap, что бы не появлялся в стенке
-                                camera.transform.position = new Vector3(cellCenterPosition.x, cellCenterPosition.y, -10f);//камера получает такое же местоположение как и герой
-                                CameraPos = !CameraPos;
+                                placementOfEnemiesAndThePlayer(maze, i, j);
                             }
                         }
                     }
@@ -156,6 +154,66 @@ public class MazeConstructor : MonoBehaviour
                     {
                         tilemapWall.SetTile(new Vector3Int(i, j, 0), wallTile);
                     }        
+                }
+            }
+        }
+    }
+    void placementOfEnemiesAndThePlayer(int[,] maze, int i, int j)
+    {
+        
+        int n = 0;
+        int[,] en = new int[5, 2];
+        Vector3 pos = new Vector3(i, j, 0f);
+        Vector3Int cellPosition = tilemap.WorldToCell(pos);
+        Vector3 cellCenterPosition = tilemap.GetCellCenterWorld(cellPosition);
+        player.transform.position = cellCenterPosition;//грой становиться на позицию по середине тайла на tilemap, что бы не появлялся в стенке
+        camera.transform.position = new Vector3(cellCenterPosition.x, cellCenterPosition.y, -10f);//камера получает такое же местоположение как и герой
+        CameraPos = !CameraPos;
+        for(int g = 0; g < 5; g++)//создание 5 врягов или другуго-го заддоного количества.
+        {
+            Enim = true;// добро циклу
+            while (Enim)
+            {
+                int b = 0;
+                int x = Random.Range(5, sizeR - 5);
+                int y = Random.Range(5, sizeR - 5);
+                if (Mathf.Abs((x + y) - (i + j)) > sizeC / 4 && x !=0 && y != 0)//Проверка растояния между врагом и игроком
+                {
+                    if (maze[x, y] == 0)//проверка на то что враг заспавниться не в стенке
+                    {
+                        if(n > 0)//если хотя бы 1 враг есть на карте
+                        {
+                            for (int f = 0; f < n; f++)//Перечисление всех врагов из массива
+                            {
+                                if (Mathf.Abs((en[f, 0] + en[f, 1]) - (x + y)) > 15)//Провека каждого врага и растояния между новым врагом
+                                {
+                                    b += 1;
+                                    if(b >= n)//Проверка на то что растояние между врагами достаточное
+                                    {
+                                        Vector3 posE = new Vector3(x, y, 0f);
+                                        Vector3Int cellPositionE = tilemap.WorldToCell(posE);
+                                        Vector3 cellCenterPositionE = tilemap.GetCellCenterWorld(cellPositionE);
+                                        Instantiate(enemies, cellCenterPositionE, Quaternion.identity);//спав врага
+                                        en[n, 0] = x;
+                                        en[n, 1] = y;
+                                        n += 1;
+                                        Enim = false;// для выхода из цикла
+                                    }
+                                }
+                            }
+                        }
+                        else//Спав самого первого врага
+                        {
+                            Vector3 posE = new Vector3(x, y, 0f);
+                            Vector3Int cellPositionE = tilemap.WorldToCell(posE);
+                            Vector3 cellCenterPositionE = tilemap.GetCellCenterWorld(cellPositionE);
+                            Instantiate(enemies, cellCenterPositionE, Quaternion.identity);
+                            en[n, 0] = x;
+                            en[n, 1] = y;
+                            n += 1;
+                            Enim = false;// для выхода из цикла
+                        }
+                    }
                 }
             }
         }

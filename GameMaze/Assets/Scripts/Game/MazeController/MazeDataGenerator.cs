@@ -99,7 +99,6 @@ public class MazeDataGenerator
         while (true)
         {
             lefrOut = Random.Range(5, sizeRows - 5);//Формирование левого выхода
-            Debug.Log(lefrOut);
             if (maze[0 + 2, lefrOut] == 0) 
             {
                 maze[0, lefrOut] = 0;
@@ -111,7 +110,6 @@ public class MazeDataGenerator
         while (true)
         {
             rightOut = Random.Range(5, sizeRows - 5);//ФОрмирование Правого выхода
-            Debug.Log(rightOut);
             if (maze[sizeRows - 3, rightOut] == 0)
             {
                 maze[sizeRows - 1, rightOut] = 0;
@@ -123,7 +121,6 @@ public class MazeDataGenerator
         while (true)
         {
             downOut = Random.Range(5, sizeRows - 5);//формирование нижнего выхода
-            Debug.Log(downOut);
             if (maze[downOut, 0 + 2] == 0)
             {
                 maze[downOut, 0] = 0;
@@ -135,7 +132,6 @@ public class MazeDataGenerator
         while (true)
         {
             upOut = Random.Range(5, sizeRows - 5);//формирование верхнего выхода
-            Debug.Log(upOut);
             if (maze[upOut, sizeCols - 3] == 0)
             {
                 maze[upOut, sizeCols - 1] = 0;

@@ -169,7 +169,6 @@ MonoBehaviour:
   showDebug: 0
   camera: {fileID: 1021735995}
   player: {fileID: 1206771172}
-  tilemapRenderer: {fileID: 1420511240}
   tilemap: {fileID: 2024803488}
   tilemapWall: {fileID: 1420511241}
   floorTile: {fileID: 11400000, guid: d556a6020a3199343b780856682b1794, type: 2}
@@ -286,6 +285,7 @@ GameObject:
   - component: {fileID: 1021735994}
   - component: {fileID: 1021735997}
   - component: {fileID: 1021735998}
+  - component: {fileID: 1021735999}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -426,6 +426,30 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &1021735999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021735993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_AssetsPPU: 100
+  m_RefResolutionX: 1280
+  m_RefResolutionY: 720
+  m_CropFrame: 0
+  m_GridSnapping: 0
+  m_FilterMode: 0
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &1206771172
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ae49575e83d29489bf18b0f68888df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2.5
 --- !u!212 &1206771174
 SpriteRenderer:
   m_ObjectHideFlags: 0
